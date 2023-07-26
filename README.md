@@ -66,8 +66,9 @@
 - key 변수의 주소는 [ebp + 0x8] 이고 buffer overflow시켜야 하는 지점은 overflowme 변수의 시작주소인 [ebp - 0x2c] 이다.
 - [ebp + 0x8]주소를 시작으로 [ebp-0x2c] 지점에 0xcafebabe를 넣으면된다.
 - 0x8 - (-0x2c) = 52 <br>
-![3](https://github.com/hanmin0512/pwnable_bof/assets/37041208/59635d6b-120c-4fa9-85e5-dee485d52ebb)
+![3](https://github.com/hanmin0512/pwnable_bof/assets/37041208/d57ab00b-ce2f-46f5-b921-7bd75171b613)
+
 - 즉 overflowme[32]버퍼에 32개이상 52개의 아무문자를 넣고 이후에 0xcafebabe를 넣으면된다.
-- 코드는 payload.py를 실행시켰다.
+- 코드는 payload.py를 실행시켰다. <br>
 ![4](https://github.com/hanmin0512/pwnable_bof/assets/37041208/b0404160-e2cf-4f0a-9c92-f0f0dcbe3aac)
   
